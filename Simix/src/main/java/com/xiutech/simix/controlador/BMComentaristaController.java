@@ -68,5 +68,14 @@ public class BMComentaristaController {
         return "/index?faces-redirect=true";
     }
     
+    
+    public String borrarCuenta() {
+        IniciarSesionController.UserLogged ul = (IniciarSesionController.UserLogged) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user");
+        ComentaristaDAO cdb = new ComentaristaDAO();
+        Comentarista comen = cdb.find(ul.getCorreo());
+        cdb.delete(comen);
+        return "/index?faces-redirect=true";
+    }
+    
    
 }

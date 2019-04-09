@@ -41,6 +41,10 @@ and open the template in the editor.
                          <p:password value="#{bMComentaristaController.contrasenia}" required="true" requiredMessage="Ingresa una contraseña" placeholder="Contraseña nueva" /><br/>
                         <p:commandButton action="#{bMComentaristaController.actualizaContrasenia()}" value="Actualizar contraseña" update=""/>
                     </h:form>
+                    
+                    <h:form id="form3">
+                        <p:commandButton action="#{bMComentaristaController.borrarCuenta()}" value="Borrar Cuenta" update=""/>
+                    </h:form>
                 </aside>
             </main>
             <footer>
